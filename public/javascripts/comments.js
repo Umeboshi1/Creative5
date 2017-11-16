@@ -29,9 +29,12 @@ $("#loginUser").click(function() {
   })
 
   $("#deleteUser").click(function() {
+    var myobj = {Username:$("#userName").val(),Password:$("#password").val()};
+    jobj = JSON.stringify(myobj);
     $.ajax({
     url:"user",
     type: "DELETE",
+    data:jobj,
     success: function(data,textStatus) {
     $("#comments").html("User deleted!");
 }
