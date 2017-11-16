@@ -28,6 +28,7 @@ router.get('/user',function(req,res,next) {
     if(err) return console.error(err);
     else{
       console.log('returning here');
+      res.send(true);
       //res.json(userList);
     }
   });
