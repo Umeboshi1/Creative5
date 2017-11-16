@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  $("#postComment").click(function(){
-      var myobj = {Name:$("#name").val(),Comment:$("#comment").val()};
+  $("#registerUser").click(function(){
+      var myobj = {Username:$("#name").val(),Password:$("#password").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
       var url = "comment";
@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
   });
 
-$("#getComments").click(function() {
+$("#loginUser").click(function() {
     $.getJSON('comment', function(data) {
       console.log(data);
       var everything = "<ul>";
@@ -28,12 +28,12 @@ $("#getComments").click(function() {
     })
   })
 
-  $("#deleteComments").click(function() {
+  $("#deleteUser").click(function() {
     $.ajax({
     url:"comment",
     type: "DELETE",
     success: function(data,textStatus) {
-    $("#comments").html("No comments for you!");
+    $("#comments").html("User deleted!");
 }
 })
 });
