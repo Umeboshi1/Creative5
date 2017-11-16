@@ -18,6 +18,12 @@ $(document).ready(function(){
 $("#loginUser").click(function() {
     $.getJSON('user', function(data) {
       console.log(data);
+      if(data === true) {
+        console.log('data is true');
+      }
+      else {
+        console.log('data is false');
+      }
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
