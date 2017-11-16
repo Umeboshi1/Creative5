@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/usersDB', {useMongoClient:true});
 
 var usersSchema = mongoose.Schema({
-  Name:String,
+  Username:String,
   Password:String
 });
 
