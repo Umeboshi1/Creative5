@@ -3,7 +3,7 @@ $(document).ready(function(){
       var myobj = {Username:$("#name").val(),Password:$("#password").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
-      var url = "comment";
+      var url = "user";
       $.ajax({
       url:url,
       type: "POST",
@@ -16,12 +16,12 @@ $(document).ready(function(){
   });
 
 $("#loginUser").click(function() {
-    $.getJSON('comment', function(data) {
+    $.getJSON('user', function(data) {
       console.log(data);
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
-        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
+        everything += "<li> Name: " + com.Name + " -- Password: " + com.Password + "</li>";
       }
       everything += "</ul>";
       $("#comments").html(everything);
@@ -30,7 +30,7 @@ $("#loginUser").click(function() {
 
   $("#deleteUser").click(function() {
     $.ajax({
-    url:"comment",
+    url:"user",
     type: "DELETE",
     success: function(data,textStatus) {
     $("#comments").html("User deleted!");
