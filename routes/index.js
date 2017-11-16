@@ -27,7 +27,8 @@ router.get('/user',function(req,res,next) {
   User.find(function(err,userList) {
     if(err) return console.error(err);
     else{
-      res.json(userList);
+      console.log('returning here');
+      //res.json(userList);
     }
   });
 });
