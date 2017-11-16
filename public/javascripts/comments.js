@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $("#registerUser").click(function(){
-      var myobj = {Username:$("#name").val(),Password:$("#password").val()};
+      var myobj = {Username:$("#userName").val(),Password:$("#password").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
       var url = "user";
@@ -21,7 +21,7 @@ $("#loginUser").click(function() {
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
-        everything += "<li> Name: " + com.Name + " -- Password: " + com.Password + "</li>";
+        everything += "<li> Username: " + com.Username + " -- Password: " + com.Password + "</li>";
       }
       everything += "</ul>";
       $("#comments").html(everything);
