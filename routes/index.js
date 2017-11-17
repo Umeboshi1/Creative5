@@ -44,7 +44,7 @@ router.get('/user',function(req,res,next) {
 //     res.send(false);
 //   }
   
-  if(User.find({"Username": "Kara"}, {"Password" : "345" }) !== null)
+  if(User.find({"Username": "Kara"}, {"Password" : "345" }) != [])
   {
     res.send(true);
   }
