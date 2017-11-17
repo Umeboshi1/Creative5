@@ -44,11 +44,14 @@ router.get('/user',function(req,res,next) {
 //     res.send(false);
 //   }
   
-  if(User.find({"Username": "Rory"}, {"Password" : "123" }) !== null)
+  if(User.find({"Username": "Kara"}, {"Password" : "345" }) !== null)
   {
     res.send(true);
   }
-  
+  else
+  {
+    res.send(false);
+  }
 //   User.find({"Username": "Rory"},{"Password" : "123"},function(err,userList) {
 //     if(err)  {
 //       res.send(false);
