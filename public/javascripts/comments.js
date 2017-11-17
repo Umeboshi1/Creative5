@@ -37,7 +37,7 @@ $("#loginUser").click(function() {
     })
   })
   
-  ("#showAll").click(function() {
+  $("#showAll").click(function() {
     $.getJSON('user', function(data) {
       console.log(data);
       var everything = "<ul>";
