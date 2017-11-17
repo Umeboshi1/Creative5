@@ -16,10 +16,10 @@ $(document).ready(function(){
   });
 
 $("#loginUser").click(function() {
-    $.getJSON('user', function(data) {
+    $.getJSON('user', function(data,textStatus) {
       console.log(data);
       var everything = "<p>";
-      if(data === true) {
+      if(textStatus === true) {
         console.log('data is true');
         everything += "<h2> Login Successful! </h2>";
       }
