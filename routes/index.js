@@ -52,7 +52,7 @@ router.get('/user',function(req,res,next) {
 //   {
 //     res.send(false);
 //   }
-  User.find({"Username": "Rory"},{"Password" : "123"},function(err,userList) {
+  User.find({"Username": "Kara"},{"Password" : "456"},function(err,userList) {
     if(err)  {
       res.send(false);
       return console.error(err);
