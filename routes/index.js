@@ -92,7 +92,7 @@ router.get('/usersAll',function(req,res,next) {
   });
 });
 
-router.post('/user',function(req,res,next){
+/*router.post('/user',function(req,res,next){
   console.log("User Post");
   console.log(req.body);
   var newUser = new User(req.body);
@@ -103,7 +103,7 @@ router.post('/user',function(req,res,next){
   });
 });
 
-/*router.delete('/user',function(req,res,next) {
+router.delete('/user',function(req,res,next) {
   console.log("delete user");
   var delUser = new User(req.body);
   var userId = 0;
