@@ -25,9 +25,10 @@ router.get('/fake',function(req,res,next){
 router.get('/user',function(req,res,next) {
   console.log("User Get");
   
-//   var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
+  console.log(req.body);
+  var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
 //   document.body.innerHTML += obj.hello;
-//   console.log(obj);
+  console.log(obj);
   
 //   var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
 
