@@ -27,7 +27,8 @@ router.get('/user',function(req,res,next) {
   
   var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
 
-  var myDocument = myCursor.hasNext() ? myCursor.next() : null;
+  var myDocument = myCursor.next();
+//   var myDocument = myCursor.hasNext() ? myCursor.next() : null;
 
   if (myDocument) {
 //     var myName = myDocument.name;
