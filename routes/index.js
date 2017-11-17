@@ -103,7 +103,7 @@ router.post('/user',function(req,res,next){
   });
 });
 
-router.delete('/user',function(req,res,next) {
+/*router.delete('/user',function(req,res,next) {
   console.log("delete user");
   var delUser = new User(req.body);
   var userId = 0;
@@ -123,7 +123,7 @@ router.delete('/user',function(req,res,next) {
 //   document.body.innerHTML += obj.hello;
   
   //User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" }).remove();
-  console.log(obj.UserName);
+  console.log(obj.UserName);*/
   /*User.remove(function(err) {
     if(err) return console.error(err);
     else {
@@ -131,11 +131,21 @@ router.delete('/user',function(req,res,next) {
       res.sendStatus(200);
     }
     });*/
-});
+//});
 /* GET home page. */
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
-});
+});*/
+
+router.delete('/delete',function(req,res,next) {
+  console.log("delete route");
+  User.remove(function(err) {
+    if(err) return console.error(err);
+    else {
+      console.log("Success");
+      res.sendStatus(200);
+    }
+    });
 
 module.exports = router;
                            
