@@ -27,10 +27,10 @@ router.get('/user',function(req,res,next) {
   
   var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
 
-  var myDocument = myCursor.next();
+//   var myDocument = myCursor.next();
 //   var myDocument = myCursor.hasNext() ? myCursor.next() : null;
 
-  if (myDocument) {
+  if (myCursor !== NULL) {
 //     var myName = myDocument.name;
 //     print (tojson(myName));
     res.send(true);
