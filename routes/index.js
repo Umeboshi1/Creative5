@@ -82,7 +82,7 @@ router.delete('/user',function(req,res,next) {
   var delUser = new User(req.body);
   var userId = 0;
   userId = delUser.id;
-  console.log(req.body.id);
+  console.log(req.body);
   //User.find({_id: req.body.id}).remove().exec();
   User.remove({"_id": req.body.id }, function(err) {
     if (!err) {
