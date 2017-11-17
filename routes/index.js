@@ -53,7 +53,7 @@ router.get('/user',function(req,res,next) {
 //   {
 //     res.send(false);
 //   }
-  User.find({"Username": "Kara"},{"Password" : "456"},function(err,userList) {
+  User.find({"Username": "obj.Username"},{"Password" : "obj.Password"},function(err,userList) {
     if(err)  {
       res.send(false);
       return console.error(err);
