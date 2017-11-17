@@ -18,7 +18,7 @@ $(document).ready(function(){
 $("#loginUser").click(function() {
     $.getJSON('user', function(data) {
       console.log(data);
-      var everything = "<p>;
+      var everything = "<p>";
       if(data === true) {
         console.log('data is true');
         everything += "<h6> Login Successful! </h6>";
