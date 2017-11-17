@@ -46,7 +46,7 @@ router.get('/user',function(req,res,next) {
   
 //   res.send(User.find({"Username": "Rory"}, {"Password" : "123" }));
   
-  User.find({{"Username": "Rory"},{"Password" : "123"}},(function(err,userList) {
+  User.find({"Username": "Rory"},{"Password" : "123"},(function(err,userList) {
     if(err) return console.error(err);
     else{
       console.log('returning here');
