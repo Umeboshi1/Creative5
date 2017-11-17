@@ -19,10 +19,10 @@ $(document).ready(function(){
       var myobj = {Username:$("#userName").val(),Password:$("#password").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
-      var url = "user";
+      var url = "login";
       $.ajax({
       url:url,
-      type: "GET",
+      type: "POST",
       data: jobj,
       contentType: "application/json; charset=utf-8",
       success: function(data,textStatus) {
