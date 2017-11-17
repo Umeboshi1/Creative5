@@ -137,7 +137,7 @@ router.delete('/user',function(req,res,next) {
   res.render('index', { title: 'Express' });
 });*/
 
-router.delete('/delete',function(req,res,next) {
+/*router.delete('/delete',function(req,res,next) {
   console.log("delete route");
   User.remove(function(err) {
     if(err) return console.error(err);
@@ -145,7 +145,7 @@ router.delete('/delete',function(req,res,next) {
       console.log("Success");
       res.sendStatus(200);
     }
-    });
+    });*/
 
 module.exports = router;
                            
