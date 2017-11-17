@@ -25,7 +25,7 @@ router.get('/fake',function(req,res,next){
 router.get('/user',function(req,res,next) {
   console.log("User Get");
   
-  var myCursor = User.find({"Username": ""}, {"Password" : "" });
+  var myCursor = User.find({"Username": "hi"}, {"Password" : "this" });
 
 //   var myDocument = myCursor.next();
 //   var myDocument = myCursor.hasNext() ? myCursor.next() : null;
