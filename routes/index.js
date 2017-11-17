@@ -58,11 +58,11 @@ router.get('/user',function(req,res,next) {
       return console.error(err);
     }
     if(!userList.length) {
-      res.send(true); 
+      res.send(false); 
     }
     else{
 //       console.log('returning here');
-      res.send(false);
+      res.send(true);
 //       res.json(userList);
     }
   });
