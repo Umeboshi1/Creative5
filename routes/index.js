@@ -27,8 +27,8 @@ router.get('/user',function(req,res,next) {
   
   
   var body = req.body;
-  var userName = body[0]['Username'];
-  var passWord = body[0]['Password'];
+  var userName = body[2]['Username'];
+  var passWord = body[2]['Password'];
   
 
 //          res.send() // 204
