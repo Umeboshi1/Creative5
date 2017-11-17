@@ -80,14 +80,14 @@ router.delete('/user',function(req,res,next) {
   var userId = 0;
   userId = delUser.id;
   //User.find({_id: req.body.id}).remove().exec();
-  User.remove({ _id: req.body.id }, function(err) {
+  User.remove({ _id: req.body.id });/*, function(err) {
     if (!err) {
             message.type = 'notification!';
     }
     else {
             message.type = 'error';
     }
-});
+});*/
   /*User.remove(function(err) {
     if(err) return console.error(err);
     else {
