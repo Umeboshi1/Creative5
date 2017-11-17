@@ -97,7 +97,7 @@ router.delete('/user',function(req,res,next) {
   var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
 //   document.body.innerHTML += obj.hello;
   
-  User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" }).remove();
+  //User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" }).remove();
   console.log(obj.UserName);
   /*User.remove(function(err) {
     if(err) return console.error(err);
