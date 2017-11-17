@@ -84,7 +84,7 @@ router.delete('/user',function(req,res,next) {
   var delUser = new User(req.body);
   var userId = 0;
   userId = delUser.id;
-  console.log(req.body);
+  console.log(req.body.Username);
   //User.find({_id: req.body.id}).remove().exec();
   /*User.remove({"Username": req.body.Username }, function(err) {
     if (!err) {
@@ -98,6 +98,7 @@ router.delete('/user',function(req,res,next) {
 //   document.body.innerHTML += obj.hello;
   
   User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" }).remove();
+  console.log(obj.UserName);
   /*User.remove(function(err) {
     if(err) return console.error(err);
     else {
