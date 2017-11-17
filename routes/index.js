@@ -25,12 +25,12 @@ router.get('/fake',function(req,res,next){
 router.get('/user',function(req,res,next) {
   console.log("User Get");
   
-  var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
+  var myCursor = User.find({"Username": ""}, {"Password" : "" });
 
 //   var myDocument = myCursor.next();
 //   var myDocument = myCursor.hasNext() ? myCursor.next() : null;
 
-  if (myCursor !== NULL) {
+  if (myCursor !== null) {
 //     var myName = myDocument.name;
 //     print (tojson(myName));
     res.send(true);
@@ -87,7 +87,7 @@ router.delete('/user',function(req,res,next) {
     else {
             console.log("yay?");
     }
-});*/
+});
   /*User.remove(function(err) {
     if(err) return console.error(err);
     else {
