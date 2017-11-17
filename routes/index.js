@@ -84,14 +84,18 @@ router.delete('/user',function(req,res,next) {
   userId = delUser.id;
   console.log(req.body);
   //User.find({_id: req.body.id}).remove().exec();
-  User.remove({"Username": req.body.Username }, function(err) {
+  /*User.remove({"Username": req.body.Username }, function(err) {
     if (!err) {
             console.log("boooo!");
     }
     else {
             console.log("yay?");
     }
-});
+});*/
+  var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
+//   document.body.innerHTML += obj.hello;
+  
+  User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" }).remove();
   /*User.remove(function(err) {
     if(err) return console.error(err);
     else {
