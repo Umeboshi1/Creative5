@@ -22,19 +22,19 @@ router.get('/fake',function(req,res,next){
   res.json(fakelist);
 });
 
-router.post('/login',function(req,res,next) {
-  console.log("User Get");
+// router.post('/login',function(req,res,next) {
+//   console.log("User Get");
   
   
-  var body = req.body;
-  var userName = body[2]['Username'];
-  var passWord = body[2]['Password'];
+//   var body = req.body;
+//   var userName = body[2]['Username'];
+//   var passWord = body[2]['Password'];
   
 
-//          res.send() // 204
-         console.dir(body);
-         console.log(userName);
-           console.log(password);
+// //          res.send() // 204
+//          console.dir(body);
+//          console.log(userName);
+//            console.log(password);
   
 //   console.log('req body' + req.query);
 //   var obj = JSON.parse(req.query); // this is how you parse a string into JSON 
@@ -64,21 +64,21 @@ router.post('/login',function(req,res,next) {
 //   {
 //     res.send(false);
 //   }
-  User.find({"Username": "username"},{"Password" : "password"},function(err,userList) {
-    if(err)  {
-      res.send(false);
-      return console.error(err);
-    }
-    if(!userList.length) {
-      res.send(false); 
-    }
-    else{
-//       console.log('returning here');
-      res.send(true);
-//       res.json(userList);
-    }
-  });
-});
+//   User.find({"Username": "username"},{"Password" : "password"},function(err,userList) {
+//     if(err)  {
+//       res.send(false);
+//       return console.error(err);
+//     }
+//     if(!userList.length) {
+//       res.send(false); 
+//     }
+//     else{
+// //       console.log('returning here');
+//       res.send(true);
+// //       res.json(userList);
+//     }
+//   });
+// });
 
 router.get('/usersAll',function(req,res,next) {
   console.log("User Get");
@@ -92,7 +92,7 @@ router.get('/usersAll',function(req,res,next) {
   });
 });
 
-/*router.post('/user',function(req,res,next){
+router.post('/user',function(req,res,next){
   console.log("User Post");
   console.log(req.body);
   var newUser = new User(req.body);
@@ -102,6 +102,8 @@ router.get('/usersAll',function(req,res,next) {
     res.sendStatus(200);
   });
 });
+
+/*
 
 router.delete('/user',function(req,res,next) {
   console.log("delete user");
