@@ -10,7 +10,7 @@ $(document).ready(function(){
       data: jobj,
       contentType: "application/json; charset=utf-8",
       success: function(data,textStatus) {
-      $("#done").html(textStatus);
+//       $("#done").html(textStatus);
       }
     });
   });
