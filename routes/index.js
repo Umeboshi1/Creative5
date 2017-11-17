@@ -29,9 +29,9 @@ router.get('/user',function(req,res,next) {
 //   document.body.innerHTML += obj.hello;
 //   console.log(obj);
   
-  var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
+//   var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
 
-  console.log(myCursor);
+//   console.log(myCursor);
 //   var myDocument = myCursor.next();
 //   var myDocument = myCursor.hasNext() ? myCursor.next() : null;
 
@@ -46,14 +46,14 @@ router.get('/user',function(req,res,next) {
   
 //   res.send(User.find({"Username": "Rory"}, {"Password" : "123" }));
   
-//   User.find(function(err,userList) {
-//     if(err) return console.error(err);
-//     else{
-//       console.log('returning here');
-//       res.send(true);
-// //       res.json(userList);
-//     }
-//   });
+  User.find({{"Username": "Rory"},{"Password" : "123"}},(function(err,userList) {
+    if(err) return console.error(err);
+    else{
+      console.log('returning here');
+      res.send(true);
+//       res.json(userList);
+    }
+  });
 });
 
 router.get('/usersAll',function(req,res,next) {
