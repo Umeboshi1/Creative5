@@ -25,7 +25,20 @@ router.get('/fake',function(req,res,next){
 router.get('/user',function(req,res,next) {
   console.log("User Get");
   
-  res.send(User.find({"Username": "Rory"}, {"Password" : "123" }));
+  var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
+
+  var myDocument = myCursor.hasNext() ? myCursor.next() : null;
+
+  if (myDocument) {
+//     var myName = myDocument.name;
+//     print (tojson(myName));
+    res.send(true);
+  }
+  else{
+    res.send(false);
+  }
+  
+//   res.send(User.find({"Username": "Rory"}, {"Password" : "123" }));
   
 //   User.find(function(err,userList) {
 //     if(err) return console.error(err);
