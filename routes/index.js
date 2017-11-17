@@ -47,13 +47,21 @@ router.post('/user',function(req,res,next){
 
 router.delete('/user',function(req,res,next) {
   console.log("delete user");
-  User.remove(function(err) {
+  var delUser = new User(req.body);
+  User.find(delUser).remove(function(err) {
     if(err) return console.error(err);
     else {
       console.log("Success");
       res.sendStatus(200);
     }
     });
+  /*User.remove(function(err) {
+    if(err) return console.error(err);
+    else {
+      console.log("Success");
+      res.sendStatus(200);
+    }
+    });*/
 });
 /* GET home page. */
 router.get('/', function(req, res, next) {
