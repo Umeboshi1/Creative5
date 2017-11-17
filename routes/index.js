@@ -60,7 +60,7 @@ router.post('/user',function(req,res,next){
 router.delete('/user',function(req,res,next) {
   console.log("delete user");
   var delUser = new User(req.body);
-  User.find(delUser).remove().exec();
+  User.find(res.json).remove().exec();
   /*User.remove(function(err) {
     if(err) return console.error(err);
     else {
