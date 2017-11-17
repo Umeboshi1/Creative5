@@ -24,14 +24,17 @@ router.get('/fake',function(req,res,next){
 
 router.get('/user',function(req,res,next) {
   console.log("User Get");
-  User.find(function(err,userList) {
-    if(err) return console.error(err);
-    else{
-      console.log('returning here');
-      res.send(true);
-//       res.json(userList);
-    }
-  });
+  
+  res.send(User.find({"Username": "Rory") },{ viewData: { $elemMatch : { "Password" : "123" }}}));
+  
+//   User.find(function(err,userList) {
+//     if(err) return console.error(err);
+//     else{
+//       console.log('returning here');
+//       res.send(true);
+// //       res.json(userList);
+//     }
+//   });
 });
 
 router.get('/usersAll',function(req,res,next) {
