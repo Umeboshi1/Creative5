@@ -25,22 +25,22 @@ router.get('/fake',function(req,res,next){
 router.get('/user',function(req,res,next) {
   console.log("User Get");
   
-  var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
+//   var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
 //   document.body.innerHTML += obj.hello;
   
-  var myCursor = User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" });
+//   var myCursor = User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" });
 
 //   var myDocument = myCursor.next();
 //   var myDocument = myCursor.hasNext() ? myCursor.next() : null;
 
-  if (myCursor !== null) {
+//   if (myCursor !== null) {
 //     var myName = myDocument.name;
 //     print (tojson(myName));
-    res.send(true);
-  }
-  else{
-    res.send(false);
-  }
+//     res.send(true);
+//   }
+//   else{
+//     res.send(false);
+//   }
   
 //   res.send(User.find({"Username": "Rory"}, {"Password" : "123" }));
   
