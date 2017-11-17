@@ -18,18 +18,21 @@ $(document).ready(function(){
 $("#loginUser").click(function() {
     $.getJSON('user', function(data) {
       console.log(data);
+      var everything = "<p>;
       if(data === true) {
         console.log('data is true');
+        everything += "<h6> Login Successful! </h6>";
       }
       else {
         console.log('data is false');
+        everything += "<h6> Login not successful, try registering first! </h6>";
       }
-      var everything = "<ul>";
-      for(var comment in data) {
-        com = data[comment];
-        everything += "<li> Username: " + com.Username + " -- Password: " + com.Password + "</li>";
-      }
-      everything += "</ul>";
+//       var everything = "<ul>";
+//       for(var comment in data) {
+//         com = data[comment];
+//         everything += "<li> Username: " + com.Username + " -- Password: " + com.Password + "</li>";
+//       }
+      everything += "</p>";
       $("#comments").html(everything);
     })
   })
