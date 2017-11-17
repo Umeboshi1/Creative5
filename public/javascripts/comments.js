@@ -36,6 +36,19 @@ $("#loginUser").click(function() {
       $("#comments").html(everything);
     })
   })
+  
+  ("#showAll").click(function() {
+    $.getJSON('user', function(data) {
+      console.log(data);
+      var everything = "<ul>";
+      for(var comment in data) {
+        com = data[comment];
+        everything += "<li> Username: " + com.Username + " -- Password: " + com.Password + "</li>";
+      }
+      everything += "</ul>";
+      $("#comments").html(everything);
+    })
+  })
 
   $("#deleteUser").click(function() {
     var myobj = {Username:$("#userName").val(),Password:$("#password").val()};
