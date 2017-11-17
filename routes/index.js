@@ -29,7 +29,7 @@ router.get('/user',function(req,res,next) {
     else{
       console.log('returning here');
       res.send(true);
-      //res.json(userList);
+      res.json(userList);
     }
   });
 });
