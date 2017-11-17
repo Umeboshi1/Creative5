@@ -135,9 +135,9 @@ router.delete('/user',function(req,res,next) {
     });*/
 //});
 /* GET home page. */
-/*router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
-});*/
+});
 
 /*router.delete('/delete',function(req,res,next) {
   console.log("delete route");
