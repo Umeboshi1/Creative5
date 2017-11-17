@@ -44,19 +44,22 @@ router.get('/user',function(req,res,next) {
 //     res.send(false);
 //   }
   
-//   res.send(User.find({"Username": "Rory"}, {"Password" : "123" }));
+  if(User.find({"Username": "Rory"}, {"Password" : "123" }) !== null)
+  {
+    res.send(true);
+  }
   
-  User.find({"Username": "Rory"},{"Password" : "123"},function(err,userList) {
-    if(err)  {
-      res.send(false);
-      return console.error(err);
-    }
-    else{
-      console.log('returning here');
-      res.send(true);
-//       res.json(userList);
-    }
-  });
+//   User.find({"Username": "Rory"},{"Password" : "123"},function(err,userList) {
+//     if(err)  {
+//       res.send(false);
+//       return console.error(err);
+//     }
+//     else{
+//       console.log('returning here');
+//       res.send(true);
+// //       res.json(userList);
+//     }
+//   });
 });
 
 router.get('/usersAll',function(req,res,next) {
