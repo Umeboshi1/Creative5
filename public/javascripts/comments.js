@@ -16,7 +16,8 @@ $(document).ready(function(){
   });
 
 $("#loginUser").click(function() {
-    $.getJSON('user', function(data,textStatus) {
+  var thisObject = {Username:$("#userName").val(),Password:$("#password").val()};
+    $.getJSON('user', function(thisObject,textStatus) {
       console.log(data);
       var everything = "<p>";
       if(textStatus === true) {
