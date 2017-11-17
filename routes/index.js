@@ -29,7 +29,7 @@ router.get('/user',function(req,res,next) {
 //   document.body.innerHTML += obj.hello;
 //   console.log(obj);
   
-  var myCursor = User.find({"Username": "obj.Username"}, {"Password" : "obj.Password" });
+  var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
 
   console.log(myCursor);
 //   var myDocument = myCursor.next();
