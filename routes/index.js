@@ -84,7 +84,7 @@ router.delete('/user',function(req,res,next) {
   userId = delUser.id;
   console.log(req.body);
   //User.find({_id: req.body.id}).remove().exec();
-  User.remove({"_id": req.body.id }, function(err) {
+  User.remove({"Username": req.body.Username },{"Password":req.body.Password}, function(err) {
     if (!err) {
             console.log("boooo!");
     }
