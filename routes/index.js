@@ -25,10 +25,21 @@ router.get('/fake',function(req,res,next){
 router.get('/user',function(req,res,next) {
   console.log("User Get");
   
-  console.log('req body' + req.query);
-  var obj = JSON.parse(req.query); // this is how you parse a string into JSON 
+  
+  var body = req.body;
+  var userName = body[0]['Username'];
+  var passWord = body[0]['Password'];
+  
+
+//          res.send() // 204
+         console.dir(body);
+         console.log(userName);
+           console.log(password);
+  
+//   console.log('req body' + req.query);
+//   var obj = JSON.parse(req.query); // this is how you parse a string into JSON 
 //   document.body.innerHTML += obj.hello;
-  console.log('parsed' + obj);
+//   console.log('parsed' + obj);
   
 //   var myCursor = User.find({"Username": "Rory"}, {"Password" : "123" });
 
@@ -53,7 +64,7 @@ router.get('/user',function(req,res,next) {
 //   {
 //     res.send(false);
 //   }
-  User.find({"Username": "obj.Username"},{"Password" : "obj.Password"},function(err,userList) {
+  User.find({"Username": "username"},{"Password" : "password"},function(err,userList) {
     if(err)  {
       res.send(false);
       return console.error(err);
