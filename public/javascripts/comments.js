@@ -21,11 +21,11 @@ $("#loginUser").click(function() {
       var everything = "<p>";
       if(data === true) {
         console.log('data is true');
-        everything += "<h6> Login Successful! </h6>";
+        everything += "<h2> Login Successful! </h2>";
       }
       else {
         console.log('data is false');
-        everything += "<h6> Login not successful, try registering first! </h6>";
+        everything += "<h2> Login not successful, try registering first! </h2>";
       }
 //       var everything = "<ul>";
 //       for(var comment in data) {
