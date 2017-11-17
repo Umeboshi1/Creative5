@@ -22,7 +22,7 @@ router.get('/fake',function(req,res,next){
   res.json(fakelist);
 });
 
-router.post('/user',function(req,res,next) {
+router.post('/login',function(req,res,next) {
   console.log("User Get");
   
   
