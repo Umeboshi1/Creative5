@@ -85,15 +85,16 @@ router.delete('/user',function(req,res,next) {
   var userId = 0;
   userId = delUser.id;
   console.log(req.body);
+  var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
   //User.find({_id: req.body.id}).remove().exec();
-  /*User.remove({"Username": req.body.Username }, function(err) {
+  User.remove({Username: obj.Username }, function(err) {
     if (!err) {
             console.log("boooo!");
     }
     else {
             console.log("yay?");
     }
-});*/
+});
   var obj = JSON.parse(req.body); // this is how you parse a string into JSON 
 //   document.body.innerHTML += obj.hello;
   
